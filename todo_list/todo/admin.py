@@ -3,5 +3,5 @@ from .models import Todo
 
 # Register your models here.
 @admin.register(Todo)
-class RecipeAdmin(admin.ModelAdmin):
-    list_display = ('task')  
+class TodoAdmin(admin.ModelAdmin):
+    list_display = ['task']  
