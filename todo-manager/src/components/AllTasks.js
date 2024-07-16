@@ -10,7 +10,7 @@ const TodoList = () => {
 
   useEffect(() => {
     axios
-      .get("${API_BASE_URL}/api/todos/")
+      .get(`${API_BASE_URL}/api/todos/`)
       .then((response) => {
         setTodos(response.data);
       })
