@@ -60,6 +60,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://52.53.233.152:8000",
     "http://todo-list-website.s3-website-us-west-1.amazonaws.com",
+    "https://d26ccdxm8y1vls.cloudfront.net",
 ]
 
 
