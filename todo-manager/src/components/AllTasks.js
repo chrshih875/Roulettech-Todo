@@ -21,7 +21,7 @@ const TodoList = () => {
 
   const markAsCompleted = (id) => {
     axios
-      .post(`http://localhost:8000/api/todos/${id}/mark_as_completed/`)
+      .post(`${API_BASE_URL}/api/todos/${id}/mark_as_completed/`)
       .then((response) => {
         setTodos(todos.map((todo) => (todo.id === id ? response.data : todo)));
       })
