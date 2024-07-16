@@ -5,11 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [error, setError] = useState(null);
-  // const [view, setView] = useState("all");
+
+  const API_BASE_URL = "http://52.53.233.152:8000";
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/todos/")
+      .get("${API_BASE_URL}/api/todos/")
       .then((response) => {
         setTodos(response.data);
       })
