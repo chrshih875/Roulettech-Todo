@@ -4,14 +4,15 @@ import { useNavigate } from "react-router-dom";
 
 const CreateTask = () => {
   const [task, setTask] = useState("");
-  const [description, setDescription] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
+  const API_BASE_URL = "http://52.53.233.152:8000";
 
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:8000/api/todos/", {
+      .post(`${API_BASE_URL}/api/todos/`, {
         task: task,
       })
       .then((response) => {

@@ -5,7 +5,7 @@ import IncompleteTasks from "./IncompleteTask";
 import { Link } from "react-router-dom";
 
 const TaskManager = () => {
-  const [view, setView] = useState("all"); // Default view
+  const [view, setView] = useState("all");
 
   return (
     <div>

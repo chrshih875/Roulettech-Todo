@@ -4,9 +4,11 @@ import axios from "axios";
 const IncompleteTasks = () => {
   const [todos, setTodos] = useState([]);
 
+  const API_BASE_URL = "http://52.53.233.152:8000";
+
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/todos/?completed=false")
+      .get(`${API_BASE_URL}/api/todos/?completed=false`)
       .then((response) => setTodos(response.data))
       .catch((error) =>
         console.error("There was an error fetching the tasks!", error)
