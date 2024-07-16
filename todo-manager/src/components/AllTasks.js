@@ -6,7 +6,7 @@ const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [error, setError] = useState(null);
 
-  const API_BASE_URL = "http://52.53.233.152:8000";
+  const API_BASE_URL = "https://52.53.233.152:8000";
 
   useEffect(() => {
     axios
